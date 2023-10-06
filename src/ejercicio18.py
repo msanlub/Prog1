@@ -5,21 +5,31 @@
 #su nombre combinando mayúsculas y minúsculas como quiera.
 
 #procedimiento
-def minuscula(nombre) -> (str):
+def calculoMinuscula(nombre:str) -> str:
     '''Función que pone el nombre en minúsculas'''
-    return (nombre.lower()) + "\n"
+    return "\n\t" +(nombre.lower()) + "\n\t"
 
-def mayuscula(nombre) -> (str):
+def calculoMayuscula(nombre:str) -> str:
     '''Función que pone el nombre en mayúsculas'''
-    return (nombre.upper()) + "\n"
+    return (nombre.upper()) + "\n\t"
 
-def primeraLetra(nombre) -> (str):
-    '''Función que coge las 3 primeras letras de nombre y apellidos'''
-    return (nombre.title())
+def calculoPrimeraLetra(nombre:str) -> str:
+    '''Función que coge las primera letra de nombre y apellidos y las pone en mayúscula'''
+    return (nombre.title() + "\n\t")
 
+def mensajeSalida(nombre:str) -> str:
+    '''función que da el mensaje de salida'''
+    return str(calculoMinuscula(nombre)) + str(calculoMayuscula(nombre)) + str(calculoPrimeraLetra(nombre))
 
 if __name__=="__main__":
     #entrada
-    nombre = str (input("Escribe tu nombre y apellidos: " + "\n"))
+    nombre = str (input("Escribe tu nombre y apellidos: "))
+
+    #procedimiento
+    minuscula = calculoMinuscula(nombre)
+    mayuscula = calculoMayuscula(nombre)
+    primeraLetra = calculoPrimeraLetra(nombre)
+    mensaje = mensajeSalida (nombre)
+
     #salida
-    print (str(minuscula(nombre)) + str(mayuscula(nombre)) + str(primeraLetra(nombre)))
+    print (mensaje)

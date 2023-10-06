@@ -3,12 +3,21 @@
 #en mayúsculas y n es el número de letras que tienen el nombre.
 
 #procedimiento
-def numeroLetras(nombre) -> (str):
+def calculoNumeroLetras(nombre:str) -> str:
     '''Función que da el numero de letras que tiene el nombre'''
     return (nombre.upper() + " -> " + str(len(nombre)))
+
+def mensajeFinal(nombre:str) -> str:
+    '''función que da el mensaje de salida'''
+    return str(calculoNumeroLetras(nombre))
 
 if __name__=="__main__":
     #entrada
     nombre = str(input("Escribe tu nombre: " + "\n"))
+
+    #procedimiento
+    numeroLetras = calculoNumeroLetras(nombre)
+    mensaje = mensajeFinal(nombre)
+
     #salida
-    print (str(numeroLetras(nombre)))
+    print (mensaje)

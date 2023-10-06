@@ -3,16 +3,24 @@
 #programa debe mostrar el precio habitual de una barra de pan (establecido en el programa como una constante),
 #el descuento que se le hace por no ser fresca y el coste final total de todas las barras no frescas.
 
-#procedimiento
-def total(numeroBarras,barra,descuento) -> (float):
+
+def total(numeroBarras:int,barra:float,descuento:float) -> float:
     '''Función que calcula el previo final de todas las barras que no son del día'''
     return (numeroBarras*(barra*descuento))
 
+def mensajeSalida (numeroBarras:int,barra:float,descuento:float) -> float:
+    '''función que da el mensaje final'''
+    return "El precio de la barra de pan del día es: " + str(barra) + " euros. Si no es del día se le aplica un descuento del: " + str(descuento) + " euros. El precio total de todas las barras que no son del día es: " + str(total(numeroBarras,barra,descuento)) + " euros."
 
 if __name__ == "__main__":
     #entrada
     numeroBarras = int(input("Escribe la cantidad de barras que has vendido sin ser del día: "))
     barra = 3.49
     descuento = (60/100)
+
+    #procedimiento
+    calculoTotal = total(numeroBarras,barra,descuento)
+    mensaje = mensajeSalida (numeroBarras,barra,descuento)
+
     #salida
-    print ("El precio de la barra de pan del día es: " + str(barra) + " euros. Si no es del día se le aplica un descuento del: " + str(descuento) + " euros. El precio total de todas las barras que no son del día es: " + str(total(numeroBarras,barra,descuento)) + " euros.")
+    print (mensaje)

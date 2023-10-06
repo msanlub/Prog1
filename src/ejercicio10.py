@@ -8,12 +8,13 @@ def mensajeSalida(calculo) -> int:
     '''función que da el mensaje final'''
     return "El resultado es: " + str(operacion(calculo))
 
-#entrada
-#no hay mensaje de entrada
+if __name__=="__main__":
+    #entrada
+    #no hay mensaje de entrada
 
-#procedimiento
-calculo = (((3 + 2) / (2 * 5)) ** 2)
-mensaje = mensajeSalida(calculo)
+    #procedimiento
+    calculo = (((3 + 2) / (2 * 5)) ** 2)
+    mensaje = mensajeSalida(calculo)
 
-#salida
-print (mensaje)
+    #salida
+    print (mensaje)

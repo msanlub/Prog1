@@ -17,6 +17,7 @@ if __name__ == "__main__":
     while n < 0:
         print ("El número tiene que ser positivo.")
         n = int (input("Escribe el número: "))
+        
     #salida
     else:
         print ("La suma de los primeros números enteros desde 1 hasta " + str(n) + " es " + str(sumaN(n)))

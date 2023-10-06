@@ -3,22 +3,31 @@
 #leyendo la cantidad de dinero depositada en la cuenta de ahorros, introducida por el usuario. Después el programa debe calcular
 #y mostrar por pantalla la cantidad de ahorros tras el primer, segundo y tercer años. Redondear cada cantidad a dos decimales.
 
-#entrada
-dinero = float(input("Escribe la cantidad de dinero que tienes: "))
-interes = 0.04
-
-#procedimiento
-def primerAño() -> (float):
+def primerAño(dinero:float,interes:float) -> (float):
     '''Función que hará el cálculo con el interes del primer año'''
     return round(dinero+ dinero*interes,2)
 
-def segundoAño() -> (float):
+def segundoAño(dinero:float,interes:float) -> (float):
     '''Función que hará el cálculo con el interés del segundo año'''
     return round(dinero + dinero*interes*2,2)
 
-def tercerAño() -> (float):
+def tercerAño(dinero:float,interes:float) -> (float):
     '''Función que hará el cálculo con el interés del tercer año'''
     return round(dinero + dinero*interes*3,2)
 
-#salida
-print ("El total con intereses después del primer año son: " + str(primerAño()) + " euros, el total con intereses del segundo año son: " + str(segundoAño()) + " euros, y el total con intereses después del tercer año son: " + str(tercerAño()) + "euros.")
+def mensajeSalida(dinero:float,interes:float) -> int:
+    return "El total con intereses después del primer año son: " + str(primerAño(dinero,interes)) + " euros, el total con intereses del segundo año son: " + str(segundoAño(dinero,interes)) + " euros, y el total con intereses después del tercer año son: " + str(tercerAño(dinero,interes)) + "euros."
+
+if __name__=="__main__":
+    #entrada
+    dinero = float(input("Escribe la cantidad de dinero que tienes: "))
+    interes = 0.04
+
+    #procedimiento
+    primero = primerAño(dinero,interes)
+    segundo = segundoAño(dinero,interes)
+    tercero = tercerAño (dinero,interes)
+    mensaje = mensajeSalida(dinero,interes)
+
+    #salida
+    print (mensaje)

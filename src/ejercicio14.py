@@ -3,13 +3,22 @@
 #muñecas que saldrán en cada paquete a demanda. Cada payaso pesa 112 g y cada muñeca 75 g.
 #Escribir un programa que lea el número de payasos y muñecas vendidos en el último pedido y calcule el peso total del paquete que será enviado.
 
-#entrada
-payasos = int (input("Indica cuantos payasos quieres enviar: "))
-muñecas = int (input("Indica cuantas muñecas vas a enviar: "))
-
-#procedimiento
-def pesoTotal() -> (int):
+def pesoTotal(payasos:int, muñecas:int) -> int:
+    '''funcion que calcula peso de payasos y muñecas'''
     return ((payasos*112) + (muñecas*75))
 
-#salida
-print ("El peso de tu paquete es de: " + str(pesoTotal()) + " gramos.")
+def mensajeSalida(payasos:int,muñecas:int) -> int:
+    '''funcion que da el mensaje final'''
+    return "El peso de tu paquete es de: " + str(pesoTotal(payasos,muñecas)) + " gramos."
+
+if __name__=="__main__":
+    #entrada
+    payasos = int (input("Indica cuantos payasos quieres enviar: "))
+    muñecas = int (input("Indica cuantas muñecas vas a enviar: "))
+
+    #procedimiento
+    peso = pesoTotal(payasos,muñecas)
+    mensaje = mensajeSalida(payasos,muñecas)
+
+    #salida
+    print (mensaje)

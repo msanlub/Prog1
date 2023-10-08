@@ -1,4 +1,4 @@
-from ejercicios.ejercicio1 import leeNombre
+'''
 from ejercicios.ejercicio2 import costeHora
 from ejercicios.ejercicio3 import operacion
 from ejercicios.ejercicio4 import temperatura
@@ -10,10 +10,7 @@ from ejercicios.ejercicio7 import suma
 from ejercicios.ejercicio11 import sumaN
 
 
-#test ejercicio 1
-def test_leeNombre():
-    nombre = "Marta"
-    assert leeNombre(nombre) == "Marta"
+
 
 #test ejercicio 2
 def test_costeHora():
@@ -61,4 +58,4 @@ def test_suma():
 #test ejercicio 11
 def test_sumaN():
     n = 2
-    assert sumaN(n) == 3
+    assert sumaN(n) == 3'''

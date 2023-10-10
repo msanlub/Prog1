@@ -10,9 +10,9 @@ def totalIVA(precio) -> (float):
     '''Funcion que calcula el precio del IVA segun el articulo'''
     return (precio * 10 / 100)
 
-def mensajeSalida(precio:float,IVA:float) -> float:
+def mensajeSalida(precioBruto,iva) -> float:
     '''funcion que calcula el mensaje'''
-    return "El IVA aplicado es del 10%, por lo que se paga en este articulo un total de " + str(totalIVA(precio)) + " euros de IVA.El precio sin IVA es: " + str(preciosinIVA(precio,IVA)) + " euros."
+    return "El IVA aplicado es del 10%, por lo que se paga en este articulo un total de " + str(iva) + " euros de IVA.El precio sin IVA es: " + str(precioBruto) + " euros."
 
 if __name__ == "__main__":
     #entrada
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     #procesamiento
     precioBruto = preciosinIVA(precio,IVA)
     iva = totalIVA(precio)
-    mensaje = mensajeSalida(precio,IVA)
+    mensaje = mensajeSalida(precioBruto,iva)
     
     #salida
     print(mensaje) 

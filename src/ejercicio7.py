@@ -5,9 +5,9 @@ def suma(numeroUno:int,numeroDos:int,numeroTres:int) -> (int):
     '''funcion de la suma de los tres numeros dados por el usuario'''
     return (numeroUno + numeroDos + numeroTres)
 
-def mensajeSalida(numeroUno:int,numeroDos:int,numeroTres:int) -> (int):
+def mensajeSalida(sumaTotal) -> (int):
     '''funcion que calcula el mensaje'''
-    return "La suma de los tres números es: " + str(suma(numeroUno,numeroDos,numeroTres))
+    return "La suma de los tres números es: " + str(sumaTotal)
 
 if __name__ == "__main__":
     #entrada
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     
     #procesamiento
     sumaTotal = suma(numeroUno,numeroDos,numeroTres)
-    mensaje = mensajeSalida(numeroUno,numeroDos,numeroTres)
+    mensaje = mensajeSalida(sumaTotal)
     
     #salida
     print(mensaje)

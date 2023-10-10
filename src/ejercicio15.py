@@ -15,8 +15,8 @@ def tercerAño(dinero:float,interes:float) -> (float):
     '''Función que hará el cálculo con el interés del tercer año'''
     return round(dinero + dinero*interes*3,2)
 
-def mensajeSalida(dinero:float,interes:float) -> int:
-    return "El total con intereses después del primer año son: " + str(primerAño(dinero,interes)) + " euros, el total con intereses del segundo año son: " + str(segundoAño(dinero,interes)) + " euros, y el total con intereses después del tercer año son: " + str(tercerAño(dinero,interes)) + "euros."
+def mensajeSalida( primero,segundo,tercero) -> int:
+    return "El total con intereses después del primer año son: " + str(primero) + " euros, el total con intereses del segundo año son: " + str(segundo) + " euros, y el total con intereses después del tercer año son: " + str(tercero) + "euros."
 
 if __name__=="__main__":
     #entrada

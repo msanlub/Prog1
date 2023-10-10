@@ -8,9 +8,9 @@ def calculoNumeroTelefono(numero:int) -> int:
     while numero[0] == "+" and numero[1:2].isdigit() and numero[3] == "-" and numero [-2:-1].isdigit() and numero[-3] == "-" and numero [4:-4].isdigit():
         return numero[4:-3] 
 
-def mensajeSalida(numero:int) -> int:
+def mensajeSalida(numeroTelefono) -> int:
     '''función que da el mensaje de salida'''
-    return calculoNumeroTelefono(numero)
+    return "El numero es: " + str(numeroTelefono)
 
 if __name__=="__main__":
     #entrada
@@ -18,7 +18,7 @@ if __name__=="__main__":
 
     #procedimiento
     numeroTelefono = calculoNumeroTelefono(numero)
-    mensaje = mensajeSalida(numero)
+    mensaje = mensajeSalida(numeroTelefono)
 
     #salida
     print(mensaje)

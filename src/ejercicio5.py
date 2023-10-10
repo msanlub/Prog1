@@ -8,7 +8,7 @@ def calculaPrecioDelArticulo(precio: float , IVA: float) -> float:
     '''funcion que calcula el precio final con IVA'''
     return (precio * IVA)
 
-def mensajeSalida(precio: float) -> float:
+def mensajeSalida(precioDelArticulo) -> float:
     '''funcion que calcula el mensaje'''
     return "El precio con IVA incluido es: " + str(precioDelArticulo)
 

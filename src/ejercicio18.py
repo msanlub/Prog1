@@ -17,9 +17,9 @@ def calculoPrimeraLetra(nombre:str) -> str:
     '''Función que coge las primera letra de nombre y apellidos y las pone en mayúscula'''
     return (nombre.title() + "\n\t")
 
-def mensajeSalida(nombre:str) -> str:
+def mensajeSalida(minuscula,mayuscula,primeraLetra) -> str:
     '''función que da el mensaje de salida'''
-    return str(calculoMinuscula(nombre)) + str(calculoMayuscula(nombre)) + str(calculoPrimeraLetra(nombre))
+    return str(minuscula) + str(mayuscula) + str(primeraLetra)
 
 if __name__=="__main__":
     #entrada

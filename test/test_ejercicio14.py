@@ -7,4 +7,4 @@ def test_pesoTotal():
     
 def test_mensajeSalida():
     peso = 524
-    assert mensajeSalida(peso) == "El peso de tu paquete es de: " + str(peso)
+    assert mensajeSalida(peso) == "El peso de tu paquete es de: " + str(peso) + " gramos."

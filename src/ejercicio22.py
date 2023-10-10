@@ -5,9 +5,9 @@ def calculoFraseVocal (frase:str,vocal:str) -> str:
     '''función que calcula la frase con la vocal'''
     return frase.replace(vocal,vocal.upper())
 
-def mensajeFinal (frase:str,vocal:str) -> str:
+def mensajeFinal (fraseVocal) -> str:
     '''función que da el mensaje de salida'''
-    return calculoFraseVocal(frase,vocal)
+    return str(fraseVocal)
 
 if __name__=="__main__":
     #entrada

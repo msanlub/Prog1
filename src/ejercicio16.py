@@ -8,9 +8,9 @@ def total(numeroBarras:int,barra:float,descuento:float) -> float:
     '''Función que calcula el previo final de todas las barras que no son del día'''
     return (numeroBarras*(barra*descuento))
 
-def mensajeSalida (numeroBarras:int,barra:float,descuento:float) -> float:
+def mensajeSalida(calculoTotal,barra:float,descuento:float) -> float:
     '''función que da el mensaje final'''
-    return "El precio de la barra de pan del día es: " + str(barra) + " euros. Si no es del día se le aplica un descuento del: " + str(descuento) + " euros. El precio total de todas las barras que no son del día es: " + str(total(numeroBarras,barra,descuento)) + " euros."
+    return "El precio de la barra de pan del día es: " + str(barra) + " euros. Si no es del día se le aplica un descuento del: " + str(descuento) + " euros. El precio total de todas las barras que no son del día es: " + str(calculoTotal) + " euros."
 
 if __name__ == "__main__":
     #entrada
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     #procedimiento
     calculoTotal = total(numeroBarras,barra,descuento)
-    mensaje = mensajeSalida (numeroBarras,barra,descuento)
+    mensaje = mensajeSalida (calculoTotal,barra,descuento)
 
     #salida
     print (mensaje)

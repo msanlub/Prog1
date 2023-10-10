@@ -15,9 +15,9 @@ def operacion(ancho:float, alto:float) -> (float):
     '''función que  hace el calculo'''
     return f"\t{ancho / 2} \n\t{ancho // 2} \n\t{alto / 3} \n\t{1 + 2 * 5}\n"
 
-def mensajeSalida(ancho:float, alto:float) -> float:
+def mensajeSalida(valor) -> float:
     '''funcion que calcula el mensaje'''
-    return f"El resultado es: \n{operacion(ancho,alto)}"
+    return "El resultado es: \n" + str(valor)
 
 if __name__ == "__main__":
     #entrada

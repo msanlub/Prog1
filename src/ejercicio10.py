@@ -1,20 +1,21 @@
 #Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética
 
 #procedimiento
-def operacion(calculo:int) -> int:
+def operacion() -> int:
     '''función que calcula la operación'''
-    return calculo
-def mensajeSalida(calculo) -> int:
+    return (((3 + 2) / (2 * 5)) ** 2)
+
+def mensajeSalida(calculoFinal) -> int:
     '''función que da el mensaje final'''
-    return "El resultado es: " + str(operacion(calculo))
+    return "El resultado es: " + str(calculoFinal)
 
 if __name__=="__main__":
     #entrada
     #no hay mensaje de entrada
 
     #procedimiento
-    calculo = (((3 + 2) / (2 * 5)) ** 2)
-    mensaje = mensajeSalida(calculo)
+    calculoFinal = operacion
+    mensaje = mensajeSalida(calculoFinal)
 
     #salida
     print (mensaje)

@@ -6,9 +6,9 @@ def imc(peso:float,estatura:float) -> float:
     '''funcion que calcula el indice de masa corporal'''
     return round((peso / estatura)**2,2)
 
-def mensajeSalida (peso:float,estatura:float) -> float:
+def mensajeSalida (calculoImc) -> float:
     '''funcion que da el mensaje final'''
-    return "Tu índice de masa corporal es: " + str(imc(peso,estatura))
+    return "Tu índice de masa corporal es: " + str(calculoImc)
 
 if __name__=="__main__":
     #entrada
@@ -17,7 +17,7 @@ if __name__=="__main__":
 
     #procedimiento 
     calculoImc = imc(peso,estatura)
-    mensaje = mensajeSalida(peso,estatura)
+    mensaje = mensajeSalida(calculoImc)
 
     #salida
     print (mensaje)

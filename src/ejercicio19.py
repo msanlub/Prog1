@@ -7,9 +7,9 @@ def calculoNumeroLetras(nombre:str) -> str:
     '''Función que da el numero de letras que tiene el nombre'''
     return (nombre.upper() + " -> " + str(len(nombre)))
 
-def mensajeFinal(nombre:str) -> str:
+def mensajeFinal(numeroLetras) -> str:
     '''función que da el mensaje de salida'''
-    return str(calculoNumeroLetras(nombre))
+    return str(numeroLetras)
 
 if __name__=="__main__":
     #entrada
@@ -17,7 +17,7 @@ if __name__=="__main__":
 
     #procedimiento
     numeroLetras = calculoNumeroLetras(nombre)
-    mensaje = mensajeFinal(nombre)
+    mensaje = mensajeFinal(numeroLetras)
 
     #salida
     print (mensaje)

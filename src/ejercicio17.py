@@ -5,9 +5,9 @@ def nombreVeces(nombre:str,numero:int) ->str:
     '''función que repite el nombre tantas veces como el número'''
     return nombre * numero
 
-def mensajeFinal(nombre:str,numeroint) -> str:
+def mensajeFinal(repetir) -> str:
     '''función que da el mensaje de salida'''
-    return nombreVeces(nombre,numero)
+    return str(repetir)
 
 if __name__ == "__main__":
     #entrada
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     
     #procedimiento
     repetir = nombreVeces(nombre,numero)
-    mensaje = mensajeFinal(nombre,numero)
+    mensaje = mensajeFinal(repetir)
 
     #salida
     print (mensaje)

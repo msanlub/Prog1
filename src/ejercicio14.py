@@ -7,9 +7,9 @@ def pesoTotal(payasos:int, muñecas:int) -> int:
     '''funcion que calcula peso de payasos y muñecas'''
     return ((payasos*112) + (muñecas*75))
 
-def mensajeSalida(payasos:int,muñecas:int) -> int:
+def mensajeSalida(peso) -> int:
     '''funcion que da el mensaje final'''
-    return "El peso de tu paquete es de: " + str(pesoTotal(payasos,muñecas)) + " gramos."
+    return "El peso de tu paquete es de: " + str(peso) + " gramos."
 
 if __name__=="__main__":
     #entrada

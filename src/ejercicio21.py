@@ -4,9 +4,9 @@ def calculoInvertida(frase:str) -> str:
     '''función que calcula la frase al reves'''
     return frase[::-1]
 
-def mensajeFinal(frase:str) -> str:
+def mensajeFinal(fraseInvertida) -> str:
     '''función que da el mensaje final'''
-    return calculoInvertida(frase)
+    return str(fraseInvertida)
 
 if __name__=="__main__":
     #entrada

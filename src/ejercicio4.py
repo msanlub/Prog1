@@ -7,7 +7,7 @@ def temperatura(celsius:float,valorUno:float,valorDos:float) -> float:
     '''funcion que pide convierte grados Celsius a grados Fahrenheit'''
     return (celsius * valorUno + valorDos)
 
-def mensajeSalida(celsius:float,valorUno:float,valorDos:float) -> float:
+def mensajeSalida(temperaturaConvertida) -> float:
     '''funcion que calcula el mensaje'''
     return "La temperatura en grados Fahrenheit es: " + str(temperaturaConvertida)
 
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     
     #proceso
     temperaturaConvertida = temperatura(celsius,valorUno,valorDos)
-    mensaje = mensajeSalida(celsius,valorUno,valorDos)
+    mensaje = mensajeSalida(temperaturaConvertida )
     
     #salida
     print (mensaje) 
